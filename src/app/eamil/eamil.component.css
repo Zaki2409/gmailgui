@@ -1,0 +1,11 @@
+.field {
+    width: 100%;
+}
+.container {
+    text-align: center;
+}
+
+.card {
+    width: 60%;
+    margin: auto;
+}
