@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./eamil.component.css']
 })
 export class EamilComponent {
+  data={
+    to: "" ,
+    subject: "" ,
+    message:"" 
+  }
+
+  dosubmit() {
+    console.log("emaail sent"),
+    console.log("DATA" , this.data)
+  }
 
 }

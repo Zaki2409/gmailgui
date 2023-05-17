@@ -1,21 +1,29 @@
 <div class="container">
     <div class="card">
         <H3>COMPOSE AN EAMIL</H3>
-
-        <mat-form-field appearance="fill" class="field">
-            <mat-label>Enter Email</mat-label>
-            <input matInput>
+  <form (ngSubmit)  ="dosubmit()">
+        <mat-form-field appearance="outline" class="field">
+            <mat-label>TO</mat-label>
+            <input matInput name="to"  [(ngModel)] = "data.to">
           </mat-form-field>
-          <mat-form-field appearance="fill" class="field">
-            <mat-label>Enter password</mat-label>
-            <input matInput>
+          <mat-form-field appearance="outline" class="field">
+            <mat-label>SUBJECT</mat-label>
+            <input matInput name="subject"  [(ngModel)] = "data.subject">
           </mat-form-field>
           <mat-form-field class="example-full-width field">
-            <mat-label>Content</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="Sushi">
+            <mat-label>ENTER YOUR MESSAGES</mat-label>
+            <textarea  name="message"  [(ngModel)] = "data.message"r ows="10 "matInput placeholder="HEY, HOW ARE YOU DOING..." ></textarea>
+            <!-- <input matInput placeholder="HEY, HOW ARE YOU DOING..." value="Sushi"> -->
           </mat-form-field>
 
+          <div class="container">
+            <button type="submit" mat-raised-button color="primary">SEND</button>
+            <button type="reset" mat-raised-button color="accent">RESET</button>
+          </div>
+
           
-        
+        </form>
+
+        {{data | json}}
     </div>
 </div>
